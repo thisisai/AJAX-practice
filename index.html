@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX PRACTICE</title>
+	<style>
+		body {
+			width: 940px;
+			margin:0 auto;
+
+		}
+		li { 
+			display: block;
+			background: #CCC;
+			list-style: none;
+			width:90%;
+			min-height: 10px;
+			padding: 20px;
+			margin-bottom: 20px;
+		}
+		ul li .edit{
+			display: none;
+		}
+		ul li.edit .edit{
+			display: initial;
+		}
+		ul li.edit .noedit{
+			display:none;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>jQuery AJAX practice</h1>
+	<h2>Friend List</h2>
+	<ul id="friend-list"></ul>
+
+	<template id="list-template">
+		<li data-id="{{id}}">  
+			<p>
+				NAME:  
+				<span class="noedit name"> {{name}} </span>
+				<input class="name edit">
+			</p>
+			<br>  
+			<p>
+				AGE: 
+				<span class="noedit age"> {{age}} </span>
+				<input class="age edit">
+			</p>
+			<br>
+			<button data-id='{{id}}' class='remove'>X</button>  
+			<button class='noedit edit-friend'>EDIT</button>  
+			<button class='edit save-edit'>SAVE</button>
+			<button class='edit cancel-edit'>CANCEL</button>  
+		</li>
+	</template>
+
+	<h4>Add a Friend!</h4>
+	<p>name: <input type="text" id="name"></p>
+	<p>age: <input type="text" id="age"></p>
+	<button id="add-friend"> ADD FRIEND</button>
+
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.3/mustache.min.js"></script>
+	<script src="main.js"></script>	
+</body>
+</html>
