@@ -75,9 +75,11 @@ $(function(){
 
 	});
 
-	/*****************
+	/**********************
 	  UPDATE(EDIT) FRIEND
-	******************/
+	***********************/
+	
+	// Start editing, hidden the noedit part , show the edit part
 	$list.delegate('.edit-friend','click', function(){
 		$li = $(this).closest('li');
 
@@ -86,10 +88,12 @@ $(function(){
 		$li.addClass('edit');
 	});
 
+	// Cancel the edit
 	$list.delegate('.cancel-edit','click', function(){
 		$(this).closest('li').removeClass('edit');
 	});
 
+	// Save the edit, update the ajax and the list item
 	$list.delegate('.save-edit' , 'click', function(){
 		$li = $(this).closest('li');
 		var updateData = {
