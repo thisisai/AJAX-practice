@@ -6,8 +6,9 @@ $(function(){
 
 	var friendListTemplate = $('#list-template').html();
 
+	// Mustache will accept the (TEMPLATE, OBJECT) parameter
 	function addFriend(item){
-		$list.append(Mustache.render(friendListTemplate, item));
+		$list.append( Mustache.render(friendListTemplate, item) );
 	}
 
 	$.ajax({

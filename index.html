@@ -32,9 +32,14 @@
 
 <body>
 	<h1>jQuery AJAX practice</h1>
-	<h2>Friend List</h2>
+	<h2>My Friend List</h2>
 	<ul id="friend-list"></ul>
 
+<!--****************************
+	template used by HTML5
+	We use mustache.js to 
+	build the {{var}}
+*****************************-->
 	<template id="list-template">
 		<li data-id="{{id}}">  
 			<p>
@@ -58,7 +63,7 @@
 
 	<h4>Add a Friend!</h4>
 	<p>name: <input type="text" id="name"></p>
-	<p>age: <input type="text" id="age"></p>
+	<p>age: <input type="number" id="age"></p>
 	<button id="add-friend"> ADD FRIEND</button>
 
 	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
